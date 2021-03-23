@@ -1,6 +1,33 @@
 <launch>
-  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" >
-      <arg name="host" value="localhost"/>
-     <arg name="port" value="3232"/>
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+    <arg name="address" value="localhost"/>
+    <arg name="port" value="3232"/>
+
+    <arg name="ssl" value="false" />
+    <arg name="certfile" value=""/>
+    <arg name="keyfile" value="" />
+
+    <arg name="retry_startup_delay" value="5" />
+
+    <arg name="fragment_timeout" value="600" />
+    <arg name="delay_between_messages" value="0" />
+    <arg name="max_message_size" value="None" />
+    <arg name="unregister_timeout" value="10" />
+    <arg name="websocket_external_port" value="None" />
+
+    <arg name="use_compression" value="false" />
+
+    <arg name="authenticate" value="false" />
+
+    <arg name="websocket_ping_interval" value="0" />
+    <arg name="websocket_ping_timeout" value="30" />
+    <arg name="websocket_null_origin" value="true" />
+
+    <arg name="topics_glob" value="[*]" />
+    <arg name="services_glob" value="[*]" />
+    <arg name="params_glob" value="[*]" />
+    <arg name="bson_only_mode" value="false" />
+    <!-- Output: screen, log -->
+    <arg name="output" value="screen" />
   </include>
 </launch>
