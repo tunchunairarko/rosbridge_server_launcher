@@ -1,5 +1,6 @@
 <launch>
-  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" >
+      <arg name="host" value="localhost"/>
      <arg name="port" value="3232"/>
   </include>
 </launch>
